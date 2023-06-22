@@ -9,9 +9,27 @@
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
-
-
+    const mamao = prompt('Informe qual é preço por unidade de mamão')  
+    const melancia = prompt('Informe qual é preço do Kg de melancia')
+    const abacate = prompt('Informe qual o preço por unidade de abacate')
+    const cebola = prompt('Informe qual o preço do Kg de cebola')
+    const dinheiro = prompt('Informe quanto dinheiro você possui para fazer a compra')
+    let mamaototal = mamao * 5
+    let melanciatotal = melancia * 3
+    let abacatetotal = abacate * 4
+    let cebolatotal = cebola * 1.1 
+    let custofinal = mamaototal + melanciatotal + abacatetotal + cebolatotal 
+    let sobra
+    let falta
     //PROCESSAMENTO
+    if (custofinal < dinheiro) {
+        sobra = dinheiro - custofinal
+        alert(`O valor total da compra será de ${custofinal} reais, e sobrará ${sobra} reais de troco`)
+    }
+    else if(custofinal > dinheiro) {
+        falta = custofinal - dinheiro
+        alert(`O valor total da compra será de ${custofinal} reais, e faltará ${falta} reais para completar o pagamento`)
+    }
 
 
     //SAÍDA

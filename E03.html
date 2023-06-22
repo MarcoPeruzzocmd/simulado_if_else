@@ -7,9 +7,21 @@
     //Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará "quantos dinheiros" (R$) estão faltando para realizar a viagem.
 
     //ENTRADA
-
-
+    const estado = prompt('Informe para qual estado você quer viajar, (digite RS para Rio Grande do sul, ou MG para Minas Gerais)')
+    const dias = Number(prompt('Informe quantos dias você vai ficar em viagem'))
+    const dinheiro = Number(prompt('Informe quanto dinheiro você pode gastar na viagem'))
+    let falta
     //PROCESSAMENTO
+    if (estado === 'RS') {
+        if (dinheiro < 180) {
+            falta = 180 - dinheiro
+            alert(`Sem férias! Está faltando ${falta} reais para você realizar uma viagem de pelo menos um dia`)
+        }
+        else if (dinheiro > 180) {
+            let custoRS = 180
+             
+        }
+    }
 
 
     //SAÍDA
